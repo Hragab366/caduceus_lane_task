@@ -1,0 +1,533 @@
+{
+	"info": {
+		"_postman_id": "ba820c57-cad7-4cfa-9a1d-cc4b6f26680a",
+		"name": "cadcuse lane project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26916075",
+		"_collection_link": "https://restless-station-814174.postman.co/workspace/My-Workspace~53297cb6-ff01-44df-85eb-0267953dd946/collection/26916075-ba820c57-cad7-4cfa-9a1d-cc4b6f26680a?action=share&source=collection_link&creator=26916075"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "admin@email.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234@Abcd",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "1234@Abcd",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get current user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "localhost",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Author",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/author",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"author"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "author3@email.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234@Abcd",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "1234@Abcd",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "author 3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/author/store",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"author",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "author@email.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234@Abcd",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "1234@Abcd",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "author edited",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/author/update/5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"author",
+								"update",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destory",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/author/delete/8",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"author",
+								"delete",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "books",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/books?author=5&title=php&description=description",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"books"
+							],
+							"query": [
+								{
+									"key": "author",
+									"value": "5"
+								},
+								{
+									"key": "title",
+									"value": "php"
+								},
+								{
+									"key": "description",
+									"value": "description"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/books/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"books",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "C ++ ",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "test description",
+									"type": "text"
+								},
+								{
+									"key": "bio",
+									"value": "test bio",
+									"type": "text"
+								},
+								{
+									"key": "published_at",
+									"value": "2024-09-17 23:20:11",
+									"type": "text"
+								},
+								{
+									"key": "cover",
+									"type": "file",
+									"src": "/C:/Users/hraga/OneDrive/Pictures/5120-x-1440-ultrawide-odyssey-kali-wallpapers-v0-xrb8h3jzp0pa1.webp"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/books",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "C ++  edited",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "test description edited",
+									"type": "text"
+								},
+								{
+									"key": "bio",
+									"value": "test bio",
+									"type": "text"
+								},
+								{
+									"key": "published_at",
+									"value": "2024-09-17 23:20:11",
+									"type": "text"
+								},
+								{
+									"key": "cover",
+									"type": "file",
+									"src": "/C:/Users/hraga/OneDrive/Pictures/wallpaperflare.com_wallpaper.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/books/update/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"books",
+								"update",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/books/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"books",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Excel",
+			"item": [
+				{
+					"name": "export books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/books/export",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"books",
+								"export"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "export import",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/hraga/Downloads/file_test.xlsx"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/books/import",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"books",
+								"import"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "6|IZdJVVH5fUI2t4Aw8VtZPoYkX1GuYsg37DGiSeWccbb50afd",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8000/api/v1",
+			"type": "string"
+		}
+	]
+}
