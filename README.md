@@ -7,7 +7,7 @@ This Laravel application manages books and authors. Each author can add, edit, a
 - **Admin Management**
   - Seed admin credentials: `admin@email.com`, password: `1234@Abcd`.
   - Admin can add, edit, and delete authors.
-  - Admin can filter and view all books with author details.
+  - Admin can filter and view all books with author details title and description.
 
 - **Author Management**
   - Admin can create authors with validation rules.
@@ -58,4 +58,4 @@ This Laravel application manages books and authors. Each author can add, edit, a
 5. Run migrations and seed the admin user:
     ```bash
     php artisan migrate --seed
-    ``
+    
