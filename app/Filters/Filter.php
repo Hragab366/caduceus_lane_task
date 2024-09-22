@@ -8,6 +8,7 @@ use Illuminate\Validation\ValidationException;
 
 abstract class Filter
 {
+
     protected Builder $query ;
     protected array $filters=[];
     protected array $verified_methods=[];
@@ -43,7 +44,7 @@ abstract class Filter
     public function  validateInput(array $rules){
         $validator = Validator::make(request()->all(), $rules);
         if ($validator->fails()) {
-            throw new ValidationException($validator);
+            dd($validator->errors());
         }
         return $validator->validated();
     }
