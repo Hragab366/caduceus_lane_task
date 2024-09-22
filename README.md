@@ -38,7 +38,7 @@ This Laravel application manages books and authors. Each author can add, edit, a
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/laravel-book-author-management.git
+    git clone https://github.com/Hragab366/caduceus_lane_task.git
     cd laravel-book-author-management
     ```
 
