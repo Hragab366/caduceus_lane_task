@@ -44,7 +44,7 @@ abstract class Filter
     public function  validateInput(array $rules){
         $validator = Validator::make(request()->all(), $rules);
         if ($validator->fails()) {
-            dd($validator->errors());
+            dd(array_values($validator->errors()->all()));
         }
         return $validator->validated();
     }
