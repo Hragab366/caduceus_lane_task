@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('guest')->group(function () {
+Route::prefix('v1')->middleware('guest')->group(function () {
    Route::post('login', LoginController::class);
 });
 
