@@ -24,7 +24,6 @@ class AuthorController extends Controller
 
     public function store(AuthorStoreRequest $request)
     {
-        dd($request->all());
 //        create author
         $author = User::create(array_merge($request->validated(), ['password' => bcrypt($request->password)]));
 //        assign role as author
