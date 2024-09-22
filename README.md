@@ -39,7 +39,7 @@ This Laravel application manages books and authors. Each author can add, edit, a
 1. Clone the repository:
     ```bash
     git clone https://github.com/Hragab366/caduceus_lane_task.git
-    cd laravel-book-author-management
+    cd caduceus_lane_task
     ```
 
 2. Install dependencies:
@@ -47,10 +47,7 @@ This Laravel application manages books and authors. Each author can add, edit, a
     composer install
     ```
 
-3. Create a copy of the environment file:
-    ```bash
-    cp .env.example .env
-    ```
+
 
 4. Set up the database:
     - Update your `.env` file with the database credentials.
